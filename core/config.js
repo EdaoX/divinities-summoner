@@ -17,8 +17,8 @@ module.exports.LAUNCH_CONFIG = (() => {
     
     return {
         webhook: {
-            domain: TELEGRAM_WEBHOOK_DOMAIN,
-            port: TELEGRAM_WEBHOOK_PORT
+            domain: process.env.TELEGRAM_WEBHOOK_DOMAIN,
+            port: process.env.TELEGRAM_WEBHOOK_PORT
         },
     };
 })();

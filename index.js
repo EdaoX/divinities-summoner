@@ -1,4 +1,4 @@
-const { ENVIRONMENT, TELEGRAM_BOT_API, LAUNCH_CONFIG } = require('./core/config');
+const { TELEGRAM_BOT_API, LAUNCH_CONFIG } = require('./core/config');
 const { makeAuthorized } = require('./core/authorization');
 const { Telegraf } = require('telegraf');
 const { commands } = require('./core/commands');
