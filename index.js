@@ -1,4 +1,4 @@
-const { TELEGRAM_BOT_API, TELEGRAM_WEBHOOK_DOMAIN, TELEGRAM_WEBHOOK_PORT } = require('./core/config');
+const { ENVIRONMENT, TELEGRAM_BOT_API, LAUNCH_CONFIG } = require('./core/config');
 const { makeAuthorized } = require('./core/authorization');
 const { Telegraf } = require('telegraf');
 const { commands } = require('./core/commands');
@@ -12,17 +12,7 @@ for(const {command, handler} of commands) {
     bot.command(command, makeAuthorized(handler));
 }
 
-bot.launch({
-    webhook: {
 process.once("SIGINT", () => bot.stop("SIGINT"));
 process.once("SIGTERM", () => bot.stop("SIGTERM"));
 
-        domain: TELEGRAM_WEBHOOK_DOMAIN,
-    
-        port: TELEGRAM_WEBHOOK_PORT,
-    
-        // Optional secret to be sent back in a header for security.
-        // e.g.: `crypto.randomBytes(64).toString("hex")`
-        //secretToken: randomAlphaNumericString,
-    },
-  });
+bot.launch(LAUNCH_CONFIG);
