@@ -14,6 +14,8 @@ for(const {command, handler} of commands) {
 
 bot.launch({
     webhook: {
+process.once("SIGINT", () => bot.stop("SIGINT"));
+process.once("SIGTERM", () => bot.stop("SIGTERM"));
 
         domain: TELEGRAM_WEBHOOK_DOMAIN,
     
