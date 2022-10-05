@@ -13,12 +13,15 @@ const composePair = (divinity, animal) => `${divinity} ${animal}`;
 const composeRandomPair = (divinities, animals) => composePair(pickRandomFromArray(divinities), pickRandomFromArray(animals));
 
 const getAnimalPictureUrl = async animal => {
-    const { photos : [ photo = {} ] = [] } = await pexelsClient.photos.search({
+    const requestData = {
         query : animal, 
         per_page: 1,
         locale : 'it-IT'
-    });
-
+    };
+    const response = await pexelsClient.photos.search(requestData);
+    console.log('Pexel Response', response);
+    const { photos : [ photo = {} ] = [] } = response;
+    console.log('Photo', photo);
     const { src : { small : url } = {} } = photo;
     return url;
 };
