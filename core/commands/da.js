@@ -1,4 +1,5 @@
 const axios = require('axios');
+const { Input } = require('telegraf');
 
 const { createCommand } = require('./index');
 const { createHelpText } = require('./help');
@@ -18,23 +19,23 @@ const getAnimalPictureUrl = async animal => {
         per_page: 1,
         locale : 'it-IT'
     };
+    
     const response = await pexelsClient.photos.search(requestData);
-    console.log('Pexel Response', response);
     const { photos : [ photo = {} ] = [] } = response;
-    console.log('Photo', photo);
-    const { src : { small : url } = {} } = photo;
+    const { src : { medium : url } = {} } = photo;
     return url;
 };
 
 module.exports.commands = [];
 
 const daCommand = 'da';
-const daHandler = ctx => ctx.reply(composeRandomPair(divinities, animals));
+// const daHandler = async ctx => await ctx.reply(composeRandomPair(divinities, animals));
+const daHandler = async ctx => await ctx.reply(composeRandomPair(divinities, animals));
 const daHelpText = createHelpText(daCommand, 'Invoca una divinità');
 module.exports.commands.push(createCommand(daCommand, daHandler, daHelpText));
 
 const dacCommand = 'dac';
-const dacHandler = ctx => ctx.reply(censor(composeRandomPair(divinities, animals)));
+const dacHandler = async ctx => await ctx.reply(censor(composeRandomPair(divinities, animals)));
 const dacHelpText = createHelpText(dacCommand, 'Invoca una divinità censurata');
 module.exports.commands.push(createCommand(dacCommand, dacHandler, dacHelpText));
 
@@ -46,10 +47,10 @@ const daiHandler = async ctx => {
     
     const url = await getAnimalPictureUrl(animal);
         
-    if(url) {    
-        return await ctx.replyWithPhoto({url}, {caption});
+    if(url) {
+        await ctx.replyWithPhoto(Input.fromURL(url), {caption});
     } else {
-        return await ctx.reply(caption);
+        await ctx.reply(caption);
     }
 };
 const daiHelpText = createHelpText(daiCommand, 'Invoca una divinità illustrata');
@@ -59,7 +60,7 @@ const sdaCommand = 'sda';
 const sdaHandler = async ctx => {
     const { data : { blasphemy } = {}} = await axios.get(blasphemyGeneratorUrl);
     if(blasphemy) {
-        ctx.reply(blasphemy);
+        await ctx.reply(blasphemy);
     }
 };
 const sdaHelpText = createHelpText(sdaCommand, 'Invoca una divinità articolata');

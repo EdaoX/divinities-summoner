@@ -9,7 +9,7 @@ const command = 'dpcm';
 const handler = async ctx => {
     const { data : { dpcm } } = await axios.get(dpcmGeneratorUrl);
     if(dpcm) {
-        ctx.reply(dpcm);
+        await ctx.reply(dpcm);
     }
 };
 const help = createHelpText(command, 'Genera un nuovo DPCM');
