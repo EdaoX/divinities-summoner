@@ -47,9 +47,9 @@ const daiHandler = async ctx => {
     const url = await getAnimalPictureUrl(animal);
         
     if(url) {    
-        ctx.replyWithPhoto({url}, {caption});
+        return await ctx.replyWithPhoto({url}, {caption});
     } else {
-        ctx.reply(caption);
+        return await ctx.reply(caption);
     }
 };
 const daiHelpText = createHelpText(daiCommand, 'Invoca una divinità illustrata');
