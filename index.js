@@ -1,10 +1,10 @@
-const { TELEGRAM_BOT_API, LAUNCH_CONFIG } = require('./core/config');
+const { TELEGRAM_BOT_API_KEY, LAUNCH_CONFIG } = require('./core/config');
 const { makeAuthorized } = require('./core/authorization');
 const { Telegraf } = require('telegraf');
 const { commands } = require('./core/commands');
 const { command : helpCommand } = require('./core/commands/help');
 
-const bot = new Telegraf(TELEGRAM_BOT_API);
+const bot = new Telegraf(TELEGRAM_BOT_API_KEY);
 
 bot.start(ctx => ctx.reply(`Benvenuto su Divinities Summoner. Per una lista di comandi disponibili utilizza /${helpCommand}`));
 

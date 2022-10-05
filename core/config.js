@@ -1,7 +1,7 @@
 const { config } = require('dotenv');
 config();
 
-module.exports.TELEGRAM_BOT_API = process.env.TELEGRAM_BOT_API;
+module.exports.TELEGRAM_BOT_API_KEY = process.env.TELEGRAM_BOT_API_KEY;
 module.exports.ALLOWED_CHAT_IDS = process.env.ALLOWED_CHAT_IDS.split(',');
 module.exports.RESTRICT_ACCESS = process.env.RESTRICT_ACCESS !== 'false';
 module.exports.ENVIRONMENT = process.env.ENVIRONMENT;
