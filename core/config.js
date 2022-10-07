@@ -14,6 +14,9 @@ module.exports.PEXELS_API_KEY = process.env.PEXELS_API_KEY;
 
 module.exports.SERPAPI_KEY = process.env.SERPAPI_KEY;
 
+module.exports.TENOR_API_CLIENT_KEY = process.env.TENOR_API_CLIENT_KEY;
+module.exports.TENOR_API_KEY = process.env.TENOR_API_KEY;
+
 module.exports.LAUNCH_CONFIG = (() => {
     if( process.env.ENVIRONMENT !== 'production' ) {
         return {};
