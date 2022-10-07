@@ -9,6 +9,7 @@ const animals = require('../data/animals');
 const { getAnimalPictureUrl : getAnimalPictureUrlFromPexels } = require('../../external-services/pexels-service');
 const { getAnimalPictureUrl : getAnimalPictureUrlFromWikimedia } = require('../../external-services/wikimedia-service');
 const { getAnimalPictureUrl : getAnimalPictureUrlFromGoogle } = require('../../external-services/serpapi/serpapi-service');
+const { getAnimalGIFUrl } = require('../../external-services/tenor-service');
 
 const blasphemyGeneratorUrl = 'https://blasphemy-generator.cyclic.app/blasphemy';
 
@@ -46,6 +47,23 @@ const daiHandler = async ctx => {
 };
 const daiHelpText = createHelpText(daiCommand, 'Invoca una divinità illustrata');
 module.exports.commands.push(createCommand(daiCommand, daiHandler, daiHelpText));
+
+const dagCommand = 'dag';
+const dagHandler = async ctx => {
+    const divinity = pickRandomFromArray(divinities);
+    const animal = pickRandomFromArray(animals);
+    const caption = composePair(divinity, animal);
+    
+    const url = await getAnimalGIFUrl(animal);
+        
+    if(url) {
+        await ctx.replyWithVideo(Input.fromURL(url), {caption});
+    } else {
+        await ctx.reply(caption);
+    }
+};
+const dagHelpText = createHelpText(dagCommand, 'Invoca una divinità animata');
+module.exports.commands.push(createCommand(dagCommand, dagHandler, dagHelpText));
 
 const sdaCommand = 'sda';
 const sdaHandler = async ctx => {
