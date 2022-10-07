@@ -24,7 +24,3 @@ module.exports.LAUNCH_CONFIG = (() => {
         },
     };
 })();
-
-const { createClient } = require('pexels');
-const pexelsClient = createClient(process.env.PEXELS_API_KEY);
-module.exports.pexelsClient = pexelsClient;

@@ -6,25 +6,12 @@ const { createHelpText } = require('./help');
 const { pickRandomFromArray, censor } = require('../utilities');
 const divinities = require('../data/divinities');
 const animals = require('../data/animals');
-const { pexelsClient } = require('../config');
+const { getAnimalPictureUrl } = require('../../external-services/pexels-service');
 
 const blasphemyGeneratorUrl = 'https://blasphemy-generator.cyclic.app/blasphemy';
 
 const composePair = (divinity, animal) => `${divinity} ${animal}`;
 const composeRandomPair = (divinities, animals) => composePair(pickRandomFromArray(divinities), pickRandomFromArray(animals));
-
-const getAnimalPictureUrl = async animal => {
-    const requestData = {
-        query : animal, 
-        per_page: 1,
-        locale : 'it-IT'
-    };
-    
-    const response = await pexelsClient.photos.search(requestData);
-    const { photos : [ photo = {} ] = [] } = response;
-    const { src : { medium : url } = {} } = photo;
-    return url;
-};
 
 module.exports.commands = [];
 
