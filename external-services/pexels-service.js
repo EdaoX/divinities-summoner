@@ -2,7 +2,6 @@ const { createClient } = require('pexels');
 const { PEXELS_API_KEY } = require('../core/config');
 
 const pexelsClient = createClient(PEXELS_API_KEY);
-module.exports.client = pexelsClient;
 
 const getAnimalPictureUrl = async animal => {
     const requestData = {
@@ -16,4 +15,4 @@ const getAnimalPictureUrl = async animal => {
     const { src : { medium : url } = {} } = photo;
     return url;
 };
-module.exports.getAnimalPictureUrl = getAnimalPictureUrl;
+module.exports = { pexelsClient, getAnimalPictureUrl };
