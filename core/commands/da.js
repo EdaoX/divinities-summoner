@@ -8,6 +8,7 @@ const divinities = require('../data/divinities');
 const animals = require('../data/animals');
 const { getAnimalPictureUrl : getAnimalPictureUrlFromPexels } = require('../../external-services/pexels-service');
 const { getAnimalPictureUrl : getAnimalPictureUrlFromWikimedia } = require('../../external-services/wikimedia-service');
+const { getAnimalPictureUrl : getAnimalPictureUrlFromGoogle } = require('../../external-services/serpapi/serpapi-service');
 
 const blasphemyGeneratorUrl = 'https://blasphemy-generator.cyclic.app/blasphemy';
 
@@ -33,8 +34,9 @@ const daiHandler = async ctx => {
     const animal = pickRandomFromArray(animals);
     const caption = composePair(divinity, animal);
     
-    const url = await getAnimalPictureUrlFromPexels(animal) || 
-        await getAnimalPictureUrlFromWikimedia(animal);
+    const url = await getAnimalPictureUrlFromPexels(animal) ||  
+        await getAnimalPictureUrlFromWikimedia(animal) || 
+        await getAnimalPictureUrlFromGoogle(animal);
         
     if(url) {
         await ctx.replyWithPhoto(Input.fromURL(url), {caption});

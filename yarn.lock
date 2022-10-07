@@ -167,6 +167,11 @@ glob-parent@~5.1.2:
   dependencies:
     is-glob "^4.0.1"
 
+google-search-results-nodejs@^2.1.0:
+  version "2.1.0"
+  resolved "https://registry.yarnpkg.com/google-search-results-nodejs/-/google-search-results-nodejs-2.1.0.tgz#f5870306e62a6590e135655d3b4a870057f3eada"
+  integrity sha512-7jEAoAV/Ful7Q2BxrYrkOst14aqwUvkEUwlRBrYATUylpp/bf3uE9lDgyk9brqbDt61hA2xkAm2sog9orHImVw==
+
 has-flag@^3.0.0:
   version "3.0.0"
   resolved "https://registry.yarnpkg.com/has-flag/-/has-flag-3.0.0.tgz#b5d454dc2199ae225699f3467e5a07f3b955bafd"

@@ -1,8 +1,6 @@
 const { createCommand } = require('./index');
 const { DEBUG } = require('../config');
 const { createHelpText } = require('./help');
-const { getAnimalPictureUrl } = require('../../external-services/wikimedia-service');
-const { Input } = require('telegraf');
 
 if( DEBUG ) {
     const command = 'debug';
