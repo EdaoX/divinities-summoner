@@ -1,4 +1,4 @@
-module.exports.createCommand = (command, handler, helpText) => ({command, handler, helpText});
+module.exports.createCommand = (command, handler, helpText, sfw = true) => ({command, handler, helpText, sfw});
 
 const fs = require('fs');
 const path = require('path');

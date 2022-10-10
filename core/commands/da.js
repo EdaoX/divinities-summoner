@@ -22,12 +22,12 @@ const daCommand = 'da';
 // const daHandler = async ctx => await ctx.reply(composeRandomPair(divinities, animals));
 const daHandler = async ctx => await ctx.reply(composeRandomPair(divinities, animals));
 const daHelpText = createHelpText(daCommand, 'Invoca una divinità');
-module.exports.commands.push(createCommand(daCommand, daHandler, daHelpText));
+module.exports.commands.push(createCommand(daCommand, daHandler, daHelpText, false));
 
 const dacCommand = 'dac';
 const dacHandler = async ctx => await ctx.reply(censor(composeRandomPair(divinities, animals)));
 const dacHelpText = createHelpText(dacCommand, 'Invoca una divinità censurata');
-module.exports.commands.push(createCommand(dacCommand, dacHandler, dacHelpText));
+module.exports.commands.push(createCommand(dacCommand, dacHandler, dacHelpText, false));
 
 const daiCommand = 'dai';
 const daiHandler = async ctx => {
@@ -46,7 +46,7 @@ const daiHandler = async ctx => {
     }
 };
 const daiHelpText = createHelpText(daiCommand, 'Invoca una divinità illustrata');
-module.exports.commands.push(createCommand(daiCommand, daiHandler, daiHelpText));
+module.exports.commands.push(createCommand(daiCommand, daiHandler, daiHelpText, false));
 
 const dagCommand = 'dag';
 const dagHandler = async ctx => {
@@ -63,7 +63,7 @@ const dagHandler = async ctx => {
     }
 };
 const dagHelpText = createHelpText(dagCommand, 'Invoca una divinità animata');
-module.exports.commands.push(createCommand(dagCommand, dagHandler, dagHelpText));
+module.exports.commands.push(createCommand(dagCommand, dagHandler, dagHelpText, false));
 
 const sdaCommand = 'sda';
 const sdaHandler = async ctx => {
@@ -73,4 +73,4 @@ const sdaHandler = async ctx => {
     }
 };
 const sdaHelpText = createHelpText(sdaCommand, 'Invoca una divinità articolata');
-module.exports.commands.push(createCommand(sdaCommand, sdaHandler, sdaHelpText));
+module.exports.commands.push(createCommand(sdaCommand, sdaHandler, sdaHelpText, false));

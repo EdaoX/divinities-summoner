@@ -17,6 +17,10 @@ module.exports.SERPAPI_KEY = process.env.SERPAPI_KEY;
 module.exports.TENOR_API_CLIENT_KEY = process.env.TENOR_API_CLIENT_KEY;
 module.exports.TENOR_API_KEY = process.env.TENOR_API_KEY;
 
+module.exports.BLASPHEMY_FREE_CHAT_IDS = process.env.BLASPHEMY_FREE_CHAT_IDS ? process.env.BLASPHEMY_FREE_CHAT_IDS.split(',') : [];
+
+module.exports.FILTER_BLASPHEMY = module.exports.BLASPHEMY_FREE_CHAT_IDS.length > 0;
+
 module.exports.LAUNCH_CONFIG = (() => {
     if( process.env.ENVIRONMENT !== 'production' ) {
         return {};
