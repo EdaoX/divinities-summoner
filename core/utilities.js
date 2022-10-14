@@ -70,3 +70,9 @@ module.exports.splitSecondsToTimeParts = totalSeconds => {
 
     return { hours, minutes, seconds };
 };
+
+module.exports.shuffleArray = arr => {
+    return arr.map(e => ({ value : e, sort : Math.random()}))
+            .sort((a, b) => a.sort - b.sort)
+            .map(({value}) => value);
+}
