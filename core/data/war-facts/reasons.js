@@ -12,5 +12,7 @@ module.exports = [
     'per affermare la supremazia della razza ariana',
     'per estinguere gli infedeli',
     'per costruire una villa al capo di stato',
-    'perché Putin è un pazzo'
+    'perché Putin è un pazzo',
+    'per sbaglio',
+    'perché è un giorno dispari'
 ];

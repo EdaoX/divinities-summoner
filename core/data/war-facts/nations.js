@@ -18,6 +18,8 @@ module.exports = [
     "il Sudafrica", 
     "la Turchia", 
     "l'Inghilterra", 
-    "gli Stati Uniti", 
-    "l'Ucraina"
+    "l'America", 
+    "l'Ucraina",
+    'Pisa',
+    'Lucca'
 ];
