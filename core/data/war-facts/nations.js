@@ -21,5 +21,6 @@ module.exports = [
     "l'America", 
     "l'Ucraina",
     'Pisa',
-    'Lucca'
+    'Lucca',
+    'Livorno'
 ];
