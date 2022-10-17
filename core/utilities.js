@@ -76,3 +76,9 @@ module.exports.shuffleArray = arr => {
             .sort((a, b) => a.sort - b.sort)
             .map(({value}) => value);
 }
+
+module.exports.randomTrue = (percentage = 0.5) => Math.random() > percentage;
+
+module.exports.capitalize = str => str.charAt(0).toUpperCase() + str.slice(1);
+
+module.exports.removeDoubleSpaces = str => str.replace(/ {2,}/g, ' ');
