@@ -6,6 +6,6 @@ warFactGenerator.addSet('N', require('../data/war-facts/nations'));
 warFactGenerator.addSet('A', require('../data/war-facts/actions'));
 warFactGenerator.addSet('R', require('../data/war-facts/reasons'));
 
-warFactGenerator.addFormat('{{N}} {{A}} {{N}} {{?semplicemente}} perché {{R}}');
+warFactGenerator.addFormat('{{N}} {{A}} {{N}} {{?semplicemente}} {{R}}');
 
 module.exports = warFactGenerator;
