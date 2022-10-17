@@ -1,11 +1,11 @@
 module.exports = [
-    'invade',
-    'si allea con',
-    'entra in guerra contro',
-    'si complimenta ufficialmente con',
-    'denigra ufficialmente',
-    'lancia una testata nucleare contro',
-    'annuncia di odiare',
-    'ringrazia',
-    'invia le proprie truppe contro'
+    'ha invaso',
+    "ha stabilito un'alleanza con",
+    'ha dichiarato guerra contro',
+    'ha elogiato ufficialmente',
+    'ha denigrato ufficialmente',
+    'ha lanciato una testata nucleare contro',
+    'ha annunciato di odiare',
+    'ha ringraziato',
+    'ha inviato le proprie truppe contro'
 ];

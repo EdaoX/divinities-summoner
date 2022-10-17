@@ -1,10 +1,9 @@
 module.exports = [
-    'perché ha trovato il gas',
+    'perché {{F}}',
     'perché è stato deciso così in un referendum',
     'perché gli andava così',
-    'perché esporta gas',
     'per dimostrare la propria forza',
-    'perché glielo ha detto {{N}}',
+    'perché glielo ha detto {{N}} {{?E}}',
     'per appropriarsi del petrolio',
     'per difendere i propri confini',
     "per ristabilire l'impero romano",
@@ -14,5 +13,11 @@ module.exports = [
     'per costruire una villa al capo di stato',
     'perché Putin è un pazzo',
     'per sbaglio',
-    'perché è un giorno dispari'
+    'perché è un giorno dispari',
+    'perché {{N}} {{A}} {{N}}',
+    'perché {{?E}} {{P}} ha sostenuto che {{?N}} {{F}}',
+    'perché {{?E}} {{P}} ha insultato {{N}}',
+    'perché {{?P}} ha scoperto che {{?N}} {{F}} {{?E}}',
+    'perché {{P}} è amico di Putin',
+    'perché {{P}} {{F}}',
 ];
