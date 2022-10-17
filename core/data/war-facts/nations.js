@@ -6,5 +6,18 @@ module.exports = [
     'la Cina',
     "l'Europa",
     'il Molise',
-    'il Congo'
+    'il Congo',
+    "l'Australia",
+    "l'Iran",
+    "il Canada",
+    "la Germania",
+    "l'India",
+    "l'Iraq",
+    "il Messico",
+    "l'Arabia Saudita",
+    "il Sudafrica", 
+    "la Turchia", 
+    "l'Inghilterra", 
+    "gli Stati Uniti", 
+    "l'Ucraina"
 ];
