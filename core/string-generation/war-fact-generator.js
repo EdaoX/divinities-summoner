@@ -11,6 +11,6 @@ warFactGenerator.addSet('P', require('../data/war-facts/persons'));
 
 warFactGenerator.addFormat('{{N}} {{A}} {{N}} {{?semplicemente}} {{R}}');
 warFactGenerator.addFormat('{{N}} {{A}} {{N}} {{?semplicemente}} {{R}} e {{R}}');
-warFactGenerator.addFormat('{{N}} {{A}} {{N}} per molteplici motivi. Principalmente {{R}}, ma anche perché {{R}} e {{R}}');
+warFactGenerator.addFormat('{{N}} {{A}} {{N}} per molteplici motivi. Principalmente {{R}}, ma anche {{R}} e {{R}}');
 
 module.exports = warFactGenerator;
