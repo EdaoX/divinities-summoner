@@ -1,13 +1,15 @@
 module.exports = [
-    'puzza',
-    'tortura animali',
-    'esegue test balistici nucleari verso {{N}}',
-    'estrae gas',
-    'contrabbanda armi, che acquista {{N}}',
-    'dà rifugio ai terroristi talebani',
-    'alleva troppi gattini',
-    'estrae petrolio',
+    'puzzava',
+    'torturava animali',
+    'eseguiva test balistici nucleari verso {{N}}',
+    'estraeva gas',
+    'contrabbandava armi, che acquistava {{N}}',
+    'dava rifugio ai terroristi talebani',
+    'allevava troppi gattini',
+    'estraeva petrolio',
     'ha trovato il gas',
-    'esporta gas',
-    'bestemmia'
+    'esportava gas',
+    'bestemmiava {{?troppo forte}}',
+    'ha insultato {{N}}',
+    '{{F}} e {{F}}'
 ]

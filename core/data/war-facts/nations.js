@@ -22,5 +22,9 @@ module.exports = [
     "l'Ucraina",
     'Pisa',
     'Lucca',
-    'Livorno'
+    'Livorno',
+    'il Cile',
+    'la Repubblica di San Marino',
+    "l'Albania",
+    'la Romania'
 ];
