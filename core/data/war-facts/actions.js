@@ -8,7 +8,7 @@ module.exports = [
     'ha annunciato di odiare',
     'ha ringraziato',
     'ha inviato le proprie truppe contro',
-    'stanziato fondi per',
+    'ha stanziato fondi per',
     'ha attaccato',
     "ha inviato un'offera di pace verso"
 ];
