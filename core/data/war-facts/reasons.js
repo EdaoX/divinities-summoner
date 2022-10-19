@@ -38,5 +38,7 @@ module.exports = [
     'perché {{P}} ha defenestrato {{?accidentalmente}} {{P}} {{?E}}',
     'per riconquistare le colonie inglesi',
     'per differenze religiose',
-    'per differenze etniche'
+    'per differenze etniche',
+    'per dare inizio alle trattative di pace',
+    'perché era la cosa giusta da fare'
 ];
