@@ -10,5 +10,7 @@ module.exports = [
     'Però senza perderci tanto tempo',
     'Ti ho mandato già la libreria {{?da usare}} io. {{?Studiatela che poi si fa}}',
     "C'è già {{fatto|bell'e pronto}}, basta che lo copi",
-    'Mi raccomando aggiungi gli indici al db che non ci sono stati messi'
+    'Mi raccomando aggiungi gli indici al db che non ci sono stati messi',
+    'BT ci ha già mandato il powerpoint',
+    "Fallo tra una cosa e l'altra"
 ];
