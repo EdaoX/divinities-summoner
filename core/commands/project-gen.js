@@ -5,7 +5,7 @@ const projectGenerator = require('../string-generation/project-generator');
 
 module.exports.commands = [];
 
-const command = 'progetto';
+const command = 'project';
 const handler = ctx => {
     const fact = projectGenerator.generate();
     ctx.reply(fact);
