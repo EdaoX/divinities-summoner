@@ -1,14 +1,7 @@
 const { createCommand } = require('./index');
 const { createHelpText } = require('./help');
 const { shuffleArray } = require('../utilities');
-
-const colleagueNames = [
-    'Gabriele',
-    'Luca',
-    'Luigi',
-    'Marco',
-    'Matteo'
-];
+const colleagueNames = require('../data/rubberduck/developers');
 
 const formatName = (name, index) => `${index + 1}) - ${name}`
 
