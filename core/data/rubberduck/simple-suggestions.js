@@ -6,7 +6,7 @@ module.exports = [
     'prova a svuotare la cache',
     '{{guarda|controlla}} git',
     'controlla che non ci abbia messo le mani {{D}} e abbia fatto casino',
-    'controlla che tu non abbia scritto {{flase|ture}} da qualche parte',
+    'controlla che tu non abbia scritto {{flase al posto di false|ture al posto di true|lenght al posto di length}} da qualche parte',
     'metti qualche echo a giro e guarda cosa ti dice',
     "togli l'ultima riga che hai scritto e {{guarda se funziona|riprova}}",
     "controlla che non ti abbia messo un import {{?a caso}} {{?in cima}}",
@@ -14,5 +14,8 @@ module.exports = [
     'controlla cosa ti risponde',
     'guarda se non è un problema nella richiesta Ajax',
     "ricontrolla l'ultimo refactor che hai fatto",
-    "{{controlla|reverta}} l'ultimo commit {{?di {{D}}}}"
+    "{{controlla|reverta}} l'ultimo commit {{?di {{D}}}}",
+    'controlla di aver caricato tutto',
+    'controlla che tu non stia caricando in produzione',
+    'il parametro tempo di sleep in PHP è in secondi'
 ];
