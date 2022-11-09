@@ -14,5 +14,5 @@ module.exports = [ // Trigger
     'inviti un amico ad iscriversi',
     'autorizzi i cookies',
     'chiudi senza salvare',
-    "quando esegui l'accesso"
+    "esegui l'accesso"
 ];
