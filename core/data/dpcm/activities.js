@@ -1,0 +1,22 @@
+module.exports = [
+    'portare fuori il cane', 
+    'lavorare', 
+    'andare al ristorante', 
+    'fare esercizio', 
+    'mangiare', 
+    'riunirti con gli amici', 
+    'vedere i parenti', 
+    'andare a correre', 
+    'andare a passeggiare',
+    'farti la doccia',
+    "farti la doccia con l'acqua calda",
+    "farti la doccia con l'acqua fredda",
+    'andare a votare',
+    'andare in vacanza',
+    'andare in macchina', 
+    'andare in moto',
+    'andare in treno',
+    'andare in autobus',
+    'andare in aereo',
+    'fare un tampone'
+];
