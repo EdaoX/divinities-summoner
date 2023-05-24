@@ -21,6 +21,8 @@ module.exports.BLASPHEMY_FREE_CHAT_IDS = process.env.BLASPHEMY_FREE_CHAT_IDS ? p
 
 module.exports.FILTER_BLASPHEMY = module.exports.BLASPHEMY_FREE_CHAT_IDS.length > 0;
 
+module.exports.RANDOM_QUOTER_URL = process.env.RANDOM_QUOTER_URL
+
 module.exports.LAUNCH_CONFIG = (() => {
     if( process.env.ENVIRONMENT !== 'production' ) {
         return {};
