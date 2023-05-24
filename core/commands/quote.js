@@ -2,7 +2,8 @@ const axios = require('axios');
 const { createCommand } = require('./index');
 const { createHelpText } = require('./help');
 const { escapeForMarkdown } = require('../utilities');
-const randomQuoterUrl = 'http://giusti.c1.biz/api/random';
+const { RANDOM_QUOTER_URL } = require('../config');
+const randomQuoterUrl = `${RANDOM_QUOTER_URL}/api/quote/random`;
 
 module.exports.commands = [];
 
